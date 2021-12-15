@@ -12,6 +12,20 @@ const app = new Vue(
             image: 'https://www.wikihow.com/images_en/thumb/2/29/Eat-Nutella-Step-1-Version-4.jpg/v4-460px-Eat-Nutella-Step-1-Version-4.jpg.webp',
             text: '',
             placeholder: 'Inserisci qualcosa',
+            img: 'https://france-export-fv-online.com/3662-large_default/nutella.jpg',
+            num: 10,
+        },
+        methods: {
+            addPr: function () {
+                this.num += 1;
+                document.getElementById("remove").disabled = false; //abilito il pulsante remove qualora fosse stato azzerato 
+            },
+            rmvPr: function () {
+                if(this.num != 0){
+                    this.num -= 1;
+                }
+                else document.getElementById("remove").disabled = true; //disabilito il pulsante quando si arriva a 0
+            }
         }
     }
 );

@@ -15,6 +15,10 @@
         <img :src="image" alt="">
         <input type="text" v-model="text" :placeholder="placeholder">
         <h2>{{ text }}</h2>
+        <img :src="img" alt="">
+        <button @click="addPr">aggiungi un barattolo al carrello</button>
+        <button @click="rmvPr" id="remove">rimuovi un barattolo dal carrello</button>
+        <h3>Hai: {{ num }} nel carrello</h3>
     </div>
     <script src="js/script.js"></script>
 </body>
